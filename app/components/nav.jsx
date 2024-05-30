@@ -8,7 +8,7 @@ const nav = () => {
     <>
       <header>
         <div className="nav-wrapper">
-          <div className="nav flex justify-between items-center p-5">
+          <div className="nav flex justify-between items-center p-5 overflow-hidden">
             <div className="nav-icon flex justify-center items-center">
               <PiBowlFoodFill size={40} />
               <span>FoodBowl</span>
