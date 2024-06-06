@@ -1,13 +1,9 @@
-import Nav from "./components/nav";
-import FoodMenu from "./components/foodMenu";
-import Banner from "./components/banner";
+import Home from "./pages/home";
 
-export default function Home() {
+export default function Root() {
   return (
     <>
-      <Nav />
-      <Banner />
-      <FoodMenu />
+      <Home />
     </>
   );
 }
