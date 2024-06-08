@@ -4,14 +4,14 @@ import Image from "next/image";
 const MenuList = () => {
   return (
     <>
-      <section className="menuList-wrapper flex flex-col w-full h-fit px-24 my-16 max-md:px-4">
+      <section className="menuList-wrapper flex flex-col w-full h-fit px-12 my-16 max-md:px-4 max-sm:px-1">
         <span className=" w-full h-0.5 bg-gray-200"></span>
-        <h1 className=" text-3xl font-semibold tracking-wider pt-6 ">
+        <h1 className=" text-3xl font-semibold tracking-wider pt-6 pl-3 ">
           Briyani's
         </h1>
 
-        <div className="menuList flex gap-6 w-full py-6 overflow-y-clip overflow-x-scroll">
-          <div className="menuList-card flex flex-col justify-start p-2 rounded-xl shadow-lg hover:scale-105">
+        <div className="menuList flex gap-10 w-full py-6 overflow-y-clip overflow-x-scroll max-sm:gap-5">
+          <div className="menuList-card flex flex-col justify-start p-2 rounded-xl shadow-lg overflow-hidden ease-in-out duration-75 hover:scale-105">
             <div className="menuList-image h-fit w-full ">
               <Image
                 src={"/assets/briyani.png"}
@@ -33,8 +33,8 @@ const MenuList = () => {
                 <p className=" text-xs py-1">Spicy chicken tandoori briyani.</p>
               </div>
               <div className="menuList-addBtn flex justify-between items-center w-full p-2">
-                <p className=" font-bold">
-                  &#8377;129 /-{" "}
+                <p className=" tracking-wider">
+                  <span className=" font-bold"> &#8377;129</span> |{" "}
                   <span className=" font-normal text-sm">
                     <select id="quantity" name="Qtr" className=" outline-none">
                       <option value="Qtr">Qtr</option>
@@ -50,7 +50,7 @@ const MenuList = () => {
             </div>
           </div>
 
-          <div className="menuList-card flex flex-col justify-start p-2 rounded-xl shadow-lg hover:scale-105">
+          <div className="menuList-card flex flex-col justify-start p-2 rounded-xl shadow-lg overflow-hidden ease-in-out duration-75 hover:scale-105">
             <div className="menuList-image h-fit w-full ">
               <Image
                 src={"/assets/briyani.png"}
@@ -72,8 +72,8 @@ const MenuList = () => {
                 <p className=" text-xs py-1">Spicy chicken tandoori briyani.</p>
               </div>
               <div className="menuList-addBtn flex justify-between items-center w-full p-2">
-                <p className=" font-bold">
-                  &#8377;129 /-{" "}
+                <p className=" tracking-wider">
+                  <span className=" font-bold"> &#8377;129</span> |{" "}
                   <span className=" font-normal text-sm">
                     <select id="quantity" name="Qtr" className=" outline-none">
                       <option value="Qtr">Qtr</option>
