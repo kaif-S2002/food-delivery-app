@@ -1,77 +1,77 @@
 import React from "react";
 import Image from "next/image";
 
-const FoodMenu = () => {
+const Categories = () => {
   return (
-    <div className="foodMenu-wrapper flex flex-col justify-center items-center mx-auto p-4 pt-12">
+    <div className="categories-wrapper flex flex-col justify-center items-center mx-auto p-4 pt-12 max-sm:px-1">
       <h1 className="title text-3xl font-bold mb-8">Categories</h1>
-      <div className="foods-container flex justify-center items-center h-fit w-fit gap-x-8 gap-y-5 select-none max-lg:grid max-md:grid-cols-2 max-lg:grid-cols-4">
-        <div className="food ">
+      <div className="categories-container flex justify-center items-center h-fit w-full gap-12 select-none overflow-x-scroll max-sm:justify-evenly max-sm:gap-6">
+        <div className="categories ">
           <a href="/veg-menu">
             <Image
               src="/assets/vegThali.png"
               alt="Veg Thali"
               width={200}
               height={200}
-              className="food-image shadow-lg w-36 h-36 rounded-full object-cover"
+              className="categories-image shadow-md shadow-gray-400 w-28 h-28 max-md:min-w-20 max-md:min-h-20 max-md:h-20 max-md:w-20 rounded-full object-cover"
             />
-            <p className="food-name text-base font-bold mt-2 text-center">
+            <p className="categories-name text-base tracking-wider font-bold mt-2 text-center max-md:text-xs">
               Veg
             </p>
           </a>
         </div>
-        <div className="food ">
+        <div className="categories ">
           <a href="/non-veg-menu">
             <Image
               src="/assets/NonVeg.png"
               alt="Non-veg"
               width={200}
               height={200}
-              className="food-image shadow-lg w-36 h-36 rounded-full object-cover"
+              className="categories-image shadow-md shadow-gray-400 w-28 h-28 max-md:min-w-20 max-md:min-h-20 max-md:h-20 max-md:w-20 rounded-full object-cover"
             />
-            <p className="food-name text-base font-bold mt-2 text-center">
+            <p className="categories-name text-base tracking-wider font-bold mt-2 text-center max-md:text-xs">
               Non-Veg
             </p>
           </a>
         </div>
-        <div className="food ">
+        <div className="categories ">
           <a href="/briyani-menu">
             <Image
               src="/assets/briyani.png"
               alt="Briyani"
               width={200}
               height={200}
-              className="food-image shadow-lg w-36 h-36 rounded-full object-cover"
+              className="categories-image shadow-md shadow-gray-400 w-28 h-28 max-md:min-w-20 max-md:min-h-20 max-md:h-20 max-md:w-20 rounded-full object-cover"
             />
-            <p className="food-name text-base font-bold mt-2 text-center">
+            <p className="categories-name text-base tracking-wider font-bold mt-2 text-center max-md:text-xs">
               Briyani
             </p>
           </a>
         </div>
-        <div className="food w-fit h-fit">
+        <div className="categories w-fit h-fit">
           <a href="/parantha-menu">
             <Image
               src="/assets/parantha.png"
               alt="Parantha"
               width={200}
               height={200}
-              className="food-image shadow-lg w-36 h-36 rounded-full object-cover"
+              className="categories-image shadow-md shadow-gray-400 w-28 h-28 max-md:min-w-20 max-md:min-h-20 max-md:h-20 max-md:w-20 rounded-full object-cover"
             />
-            <p className="food-name text-base font-bold mt-2 text-center">
+            <p className="categories-name text-base tracking-wider font-bold mt-2 text-center max-md:text-xs">
               Parantha
             </p>
           </a>
         </div>
-        <div className="food ">
+        <div className="categories ">
           <a href="/softdrinks-menu">
             <Image
               src="/assets/coldDrink.png"
               alt="Soft Drinks"
               width={200}
               height={200}
-              className="food-image shadow-lg w-36 h-36 rounded-full object-cover"
+              className="categories-image shadow-md shadow-gray-400 w-28 h-28 max-md:min-w-20 max-md:min-h-20 max-md:h-20 max-md:w-20 rounded-full object-cover"
             />
-            <p className="food-name text-base font-bold mt-2 text-center">
+            <p className="categories-name text-base tracking-wider font-bold mt-2 text-center max-md:text-xs">
               Soft Drinks
             </p>
           </a>
@@ -81,4 +81,4 @@ const FoodMenu = () => {
   );
 };
 
-export default FoodMenu;
+export default Categories;
