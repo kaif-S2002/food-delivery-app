@@ -1,6 +1,6 @@
 import Nav from "../components/nav";
-import FoodMenu from "../components/foodMenu";
 import Banner from "../components/banner";
+import Categories from "../components/categories";
 import MenuList from "../components/menuList";
 
 const Home = () => {
@@ -8,7 +8,7 @@ const Home = () => {
     <>
       <Nav />
       <Banner />
-      <FoodMenu />
+      <Categories />
       <MenuList />
     </>
   );
