@@ -6,6 +6,9 @@
   background-color: white;
   color: black;
 }
+.nav-items > span:hover {
+  color: rgb(21 128 61 / 1);
+}
 .banner-wrapper {
   padding: 2rem 0.5rem;
   margin: 6rem 1rem 1rem 1rem;
@@ -17,7 +20,19 @@
   font-family: "Times New Roman", Times, serif;
   font-weight: bold;
   font-size: 9rem;
-  background-image: url(/assets/banner.png);
+  background-image: url(./assets/images/banner.png);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.categories-container {
+  scrollbar-width: none;
+}
+.menuList {
+  scrollbar-width: none;
+}
+.menuList-card {
+  min-width: 260px;
+  max-width: 260px;
+  max-height: 270px;
+  min-height: 270px;
 }
