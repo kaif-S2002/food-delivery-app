@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  scroll-behavior: smooth;
+}
 .nav-wrapper {
   background-color: white;
   color: black;
@@ -25,9 +28,11 @@
   -webkit-text-fill-color: transparent;
 }
 .categories-container {
+  scroll-behavior: smooth;
   scrollbar-width: none;
 }
 .menuList {
+  scroll-behavior: smooth;
   scrollbar-width: none;
 }
 .menuList-card {
@@ -35,4 +40,10 @@
   max-width: 260px;
   max-height: 270px;
   min-height: 270px;
+}
+
+@media screen and (max-width: 640px) {
+  .nav-items > span:hover {
+    color: black;
+  }
 }
