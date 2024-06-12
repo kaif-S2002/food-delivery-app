@@ -47,3 +47,28 @@ body {
     color: black;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .footer-items {
+    display: grid;
+    padding: 0 1rem;
+    grid-template-areas:
+      "section1 section1 "
+      "section2 section3"
+      "section4 section4";
+  }
+  .footer-sec-1 {
+    grid-area: section1;
+    align-items: center;
+  }
+  .footer-sec-2 {
+    grid-area: section2;
+  }
+  .footer-sec-3 {
+    grid-area: section3;
+  }
+  .footer-sec-4 {
+    grid-area: section4;
+    align-items: center;
+  }
+}
