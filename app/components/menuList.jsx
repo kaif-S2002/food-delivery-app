@@ -4,14 +4,14 @@ import Image from "next/image";
 const MenuList = () => {
   return (
     <>
-      <section className="menuList-wrapper flex flex-col w-full h-fit px-12 my-16 max-md:px-4 max-sm:px-1">
+      <section className="menuList-wrapper flex flex-col w-full h-fit px-12 my-16 max-md:px-4 max-sm:px-0">
         <span className=" w-full h-0.5 bg-gray-200"></span>
         <h1 className=" text-3xl font-semibold tracking-wider pt-6 pl-3 ">
           Briyani's
         </h1>
 
-        <div className="menuList flex gap-10 w-full py-6 overflow-y-clip overflow-x-scroll max-sm:gap-5">
-          <div className="menuList-card flex flex-col justify-start p-2 rounded-xl shadow-lg overflow-hidden ease-in-out duration-75 hover:scale-105">
+        <div className="menuList flex gap-10 w-full py-6 overflow-y-clip overflow-x-scroll max-sm:gap-2">
+          <div className="menuList-card flex flex-col justify-start p-2 rounded-xl shadow-lg overflow-hidden ease-in-out duration-75 hover:scale-105 max-sm:mx-2">
             <div className="menuList-image h-fit w-full ">
               <Image
                 src={"/assets/briyani.png"}
@@ -50,7 +50,7 @@ const MenuList = () => {
             </div>
           </div>
 
-          <div className="menuList-card flex flex-col justify-start p-2 rounded-xl shadow-lg overflow-hidden ease-in-out duration-75 hover:scale-105">
+          <div className="menuList-card flex flex-col justify-start p-2 rounded-xl shadow-lg overflow-hidden ease-in-out duration-75 hover:scale-105 max-sm:mx-2">
             <div className="menuList-image h-fit w-full ">
               <Image
                 src={"/assets/briyani.png"}
