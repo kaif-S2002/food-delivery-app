@@ -3,10 +3,10 @@ import Image from "next/image";
 
 const Categories = () => {
   return (
-    <div className="categories-wrapper flex flex-col justify-center items-center mx-auto p-4 pt-12 max-sm:px-1">
+    <div className="categories-wrapper flex flex-col justify-center items-center p-4 pt-12 max-sm:px-0">
       <h1 className="title text-3xl font-bold mb-8">Categories</h1>
       <div className="categories-container flex justify-center items-center h-fit w-full gap-12 select-none overflow-x-scroll max-sm:justify-evenly max-sm:gap-6">
-        <div className="categories ">
+        <div className="categories max-sm:ml-2">
           <a href="/veg-menu">
             <Image
               src="/assets/vegThali.png"
@@ -62,7 +62,7 @@ const Categories = () => {
             </p>
           </a>
         </div>
-        <div className="categories ">
+        <div className="categories max-sm:mr-2">
           <a href="/softdrinks-menu">
             <Image
               src="/assets/coldDrink.png"
