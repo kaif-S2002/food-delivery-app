@@ -72,8 +72,8 @@ const Carousel = () => {
       <Slider {...settings}>
         {carouselData.map((data) => {
           return (
-            <div className=" h-full w-full p-4 rounded-xl text-white shadow-xl bg-neutral-500 overflow-hidden">
-              <p className=" flex justify-center items-center text-6xl font-bold h-full">
+            <div className="slider-card h-full w-full p-4 rounded-xl text-white shadow-xl overflow-hidden">
+              <p className=" flex justify-center items-center text-6xl font-bold h-full max-sm:text-5xl">
                 {data}
               </p>
             </div>
