@@ -4,6 +4,8 @@
 
 body {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 .nav-wrapper {
   background-color: white;
@@ -27,6 +29,26 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.slick-slide > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.4rem;
+  height: 14rem;
+  flex-wrap: nowrap;
+  background-color: green;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.slick-arrow {
+  z-index: 1;
+}
+.slick-arrow.slick-next {
+  right: 2%;
+}
+.slick-arrow.slick-prev {
+  left: 2%;
+}
 .categories-container {
   scroll-behavior: smooth;
   scrollbar-width: none;
@@ -40,12 +62,6 @@ body {
   max-width: 260px;
   max-height: 270px;
   min-height: 270px;
-}
-
-@media screen and (max-width: 640px) {
-  .nav-items > span:hover {
-    color: black;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -70,5 +86,20 @@ body {
   .footer-sec-4 {
     grid-area: section4;
     align-items: center;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .nav-items > span:hover {
+    color: black;
+  }
+  .slick-slide > div {
+    margin: 0 0.3rem;
+  }
+  .slick-arrow.slick-next {
+    right: 1%;
+  }
+  .slick-arrow.slick-prev {
+    left: 1%;
   }
 }
