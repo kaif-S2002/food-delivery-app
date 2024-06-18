@@ -30,7 +30,7 @@ const Carousel = () => {
       {
         breakpoint: 1280,
         settings: {
-          centerPadding: "220px",
+          centerPadding: "260px",
           slidesToShow: 1,
           slidesToScroll: 1,
         },
