@@ -14,10 +14,11 @@ const MenuList = () => {
           <div className="menuList-card flex flex-col justify-start p-2 rounded-xl shadow-lg overflow-hidden ease-in-out duration-75 hover:scale-105 max-sm:mx-2">
             <div className="menuList-image h-fit w-full ">
               <Image
-                src={"/assets/briyani.png"}
+                src={"/images/briyani.png"}
+                alt="veg thali"
                 width={200}
                 height={200}
-                alt="veg thali"
+                loading="lazy"
                 className=" rounded-xl h-28 w-full object-cover "
               />
             </div>
@@ -53,10 +54,11 @@ const MenuList = () => {
           <div className="menuList-card flex flex-col justify-start p-2 rounded-xl shadow-lg overflow-hidden ease-in-out duration-75 hover:scale-105 max-sm:mx-2">
             <div className="menuList-image h-fit w-full ">
               <Image
-                src={"/assets/briyani.png"}
+                src={"/images/briyani.png"}
+                alt="veg thali"
                 width={200}
                 height={200}
-                alt="veg thali"
+                loading="lazy"
                 className=" rounded-xl h-28 w-full object-cover "
               />
             </div>
