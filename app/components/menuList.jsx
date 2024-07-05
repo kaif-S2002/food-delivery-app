@@ -11,7 +11,7 @@ const MenuList = () => {
         </h1>
 
         <div className="menuList flex gap-10 w-full py-6 overflow-y-clip overflow-x-scroll max-sm:gap-2">
-          <div className="menuList-card flex flex-col justify-start p-2 rounded-xl shadow-lg overflow-hidden ease-in-out duration-75 hover:scale-105 max-sm:mx-2">
+          <div className="menuList-card flex flex-col justify-start p-2 rounded-xl shadow-xl overflow-hidden ease-in-out duration-75 hover:scale-105 max-sm:mx-2">
             <div className="menuList-image h-fit w-full ">
               <Image
                 src={"/images/briyani.png"}
@@ -51,7 +51,7 @@ const MenuList = () => {
             </div>
           </div>
 
-          <div className="menuList-card flex flex-col justify-start p-2 rounded-xl shadow-lg overflow-hidden ease-in-out duration-75 hover:scale-105 max-sm:mx-2">
+          <div className="menuList-card flex flex-col justify-start p-2 rounded-xl shadow-xl overflow-hidden ease-in-out duration-75 hover:scale-105 max-sm:mx-2">
             <div className="menuList-image h-fit w-full ">
               <Image
                 src={"/images/briyani.png"}
