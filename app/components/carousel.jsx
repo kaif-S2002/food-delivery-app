@@ -10,11 +10,11 @@ const Carousel = () => {
     centerMode: true,
     dots: true,
     infinite: true,
-    centerPadding: "180px",
     slidesToShow: 1,
     slidesToScroll: 1,
     swipeToSlide: true,
     autoplay: true,
+    pauseOnHover: false,
     speed: 1000,
     autoplaySpeed: 10000,
     initialSlide: 0,
@@ -23,64 +23,59 @@ const Carousel = () => {
         breakpoint: 1536,
         settings: {
           centerPadding: "260px",
-          slidesToShow: 1,
-          slidesToScroll: 1,
         },
       },
       {
         breakpoint: 1280,
         settings: {
-          centerPadding: "260px",
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          centerPadding: "160px",
         },
       },
       {
         breakpoint: 1024,
         settings: {
           centerPadding: "160px",
-          slidesToShow: 1,
-          slidesToScroll: 1,
         },
       },
       {
         breakpoint: 768,
         settings: {
           centerPadding: "80px",
-          slidesToShow: 1,
-          slidesToScroll: 1,
         },
       },
       {
         breakpoint: 480,
         settings: {
           centerPadding: "25px",
-          slidesToShow: 1,
-          slidesToScroll: 1,
         },
       },
     ],
   };
 
   const carouselData = [
-    "Tasty food for every mood.",
-    " Food Is A Never Ending Story.",
-    "Beware Of Expensive Food.",
+    { key: "1", text: " Food Is A Never Ending Story." },
+    { key: "2", text: "Tasty Food For Every Mood." },
+    { key: "3", text: "Beware From Expensive Food." },
   ];
   return (
-    <div className="slider-container mt-24 h-64 overflow-hidden">
-      <Slider {...settings}>
-        {carouselData.map((data) => {
-          return (
-            <div className="slider-card h-full w-full p-4 rounded-xl text-white shadow-xl overflow-hidden">
-              <p className=" flex justify-center items-center text-6xl font-bold h-full max-sm:text-5xl">
-                {data}
-              </p>
-            </div>
-          );
-        })}
-      </Slider>
-    </div>
+    <>
+      <div className="slider-container mt-24 h-fit">
+        <Slider {...settings}>
+          {carouselData.map((data) => {
+            return (
+              <div
+                className="slider-card h-full w-full p-4 rounded-xl bg-gray-300 text-gray-600 shadow-xl overflow-hidden"
+                key={data.key}
+              >
+                <p className=" flex justify-center items-center text-6xl font-bold h-full max-sm:text-5xl">
+                  {data.text}
+                </p>
+              </div>
+            );
+          })}
+        </Slider>
+      </div>
+    </>
   );
 };
 
