@@ -6,27 +6,18 @@ body {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
-}
-.nav-wrapper {
-  background-color: white;
-  color: black;
+  color: #1f2937;
 }
 .nav-items > span:hover {
   color: rgb(21 128 61 / 1);
-}
-.slider-card {
-  /* background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%); */
-  /* background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%); */
-  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
 }
 .slick-slide > div {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 0.4rem;
-  height: 14rem;
+  height: 18rem;
   flex-wrap: nowrap;
-  background-color: green;
   border-radius: 1rem;
   overflow: hidden;
 }
