@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Categories = () => {
   return (
-    <div className="categories-wrapper flex flex-col justify-center items-center p-4 pt-12 max-sm:px-0">
+    <div className="categories-wrapper flex flex-col justify-center items-center p-4 pt-14 max-sm:pt-16 max-sm:px-0">
       <h1 className="title text-3xl font-bold mb-10 tracking-wider">
         Categories
       </h1>
@@ -18,7 +18,7 @@ const Categories = () => {
               loading="lazy"
               className="categories-image shadow-md shadow-gray-400 w-28 h-28 max-md:min-w-20 max-md:min-h-20 max-md:h-20 max-md:w-20 rounded-full object-cover"
             />
-            <p className="categories-name text-base tracking-wider font-bold mt-2 text-center max-md:text-xs">
+            <p className="categories-name text-sm tracking-wider font-bold mt-2 text-center max-md:text-xs">
               Veg
             </p>
           </a>
@@ -33,7 +33,7 @@ const Categories = () => {
               loading="lazy"
               className="categories-image shadow-md shadow-gray-400 w-28 h-28 max-md:min-w-20 max-md:min-h-20 max-md:h-20 max-md:w-20 rounded-full object-cover"
             />
-            <p className="categories-name text-base tracking-wider font-bold mt-2 text-center max-md:text-xs">
+            <p className="categories-name text-sm tracking-wider font-bold mt-2 text-center max-md:text-xs">
               Non-Veg
             </p>
           </a>
@@ -48,7 +48,7 @@ const Categories = () => {
               loading="lazy"
               className="categories-image shadow-md shadow-gray-400 w-28 h-28 max-md:min-w-20 max-md:min-h-20 max-md:h-20 max-md:w-20 rounded-full object-cover"
             />
-            <p className="categories-name text-base tracking-wider font-bold mt-2 text-center max-md:text-xs">
+            <p className="categories-name text-sm tracking-wider font-bold mt-2 text-center max-md:text-xs">
               Briyani
             </p>
           </a>
@@ -63,7 +63,7 @@ const Categories = () => {
               loading="lazy"
               className="categories-image shadow-md shadow-gray-400 w-28 h-28 max-md:min-w-20 max-md:min-h-20 max-md:h-20 max-md:w-20 rounded-full object-cover"
             />
-            <p className="categories-name text-base tracking-wider font-bold mt-2 text-center max-md:text-xs">
+            <p className="categories-name text-sm tracking-wider font-bold mt-2 text-center max-md:text-xs">
               Parantha
             </p>
           </a>
@@ -78,7 +78,7 @@ const Categories = () => {
               loading="lazy"
               className="categories-image shadow-md shadow-gray-400 w-28 h-28 max-md:min-w-20 max-md:min-h-20 max-md:h-20 max-md:w-20 rounded-full object-cover"
             />
-            <p className="categories-name text-base tracking-wider font-bold mt-2 text-center max-md:text-xs">
+            <p className="categories-name text-sm tracking-wider font-bold mt-2 text-center max-md:text-xs">
               Soft Drinks
             </p>
           </a>
