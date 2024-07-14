@@ -1,11 +1,12 @@
 "use client";
+import { signOut } from "next-auth/react";
 import React from "react";
 
 const dropDownMenu = (props) => {
   return (
     <>
       <div
-        className={`dropDownMenu-wrapper py-5 -mt-2 px-8 w-fit absolute bg-white rounded-lg shadow-lg ${props.visible}  duration-1000 ease-in-out overflow-hidden`}
+        className={`dropDownMenu-wrapper py-5 -mt-2 px-8 w-fit absolute bg-white rounded-lg shadow-lg ${props.visible}  duration-1000 ease-in-out overflow-hidden `}
       >
         <div className="dropDownMenu-items">
           <ul className=" flex flex-col justify-center items-center gap-6 text-lg tracking-wide">
@@ -15,9 +16,12 @@ const dropDownMenu = (props) => {
               </a>
             </li>
             <li>
-              <a href="" className=" hover:text-green-600">
+              <button
+                className="logout-btn hover:text-green-600"
+                onClick={() => signOut()}
+              >
                 Logout
-              </a>
+              </button>
             </li>
           </ul>
         </div>
