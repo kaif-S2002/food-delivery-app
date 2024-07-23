@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { PiBowlFoodFill } from "react-icons/pi";
 import { IoIosSearch } from "react-icons/io";
 import { CiShoppingCart } from "react-icons/ci";
@@ -9,9 +9,22 @@ import { useSession } from "next-auth/react";
 import DropDownMenu from "./dropDownMenu";
 
 const nav = (props) => {
-  const [token, setToken] = useState();
+  const [isAdmin, setIsAdmin] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const { status } = useSession();
+  const session = useSession();
+  const status = session.status;
+
+  useEffect(() => {
+    if (status === "authenticated") {
+      const { email } = session.data.user;
+      if (email === "kaifs8998@gmail.com") {
+        setIsAdmin(true);
+      } else {
+        setIsAdmin(false);
+      }
+    } else {
+    }
+  }, [status]);
 
   return (
     <>
@@ -19,7 +32,7 @@ const nav = (props) => {
         <div className="nav-wrapper w-full h-fit fixed z-10 shadow top-0 bg-gray-100">
           <div className="nav flex justify-between items-center py-4 px-10 font-semibold overflow-hidden select-none max-sm:px-5">
             <div className="nav-icon flex justify-center items-center text-sm text-green-700 font-serif font-bold cursor-pointer">
-              <a href="" className=" flex justify-center items-center">
+              <a href="/" className=" flex justify-center items-center">
                 <span>FOOD</span>
                 <PiBowlFoodFill size={25} />
                 <span>BOWL</span>
@@ -34,8 +47,8 @@ const nav = (props) => {
                 <a href="/"></a>
                 <CiShoppingCart size={30} />
               </span>
-              {token === "adminToken" ? (
-                <span className=" flex gap-1 cursor-pointer">
+              {isAdmin ? (
+                <span className="admin-icon flex gap-1 cursor-pointer">
                   Admin
                   <RiAdminFill size={18} className=" mt-0.5" />
                 </span>
