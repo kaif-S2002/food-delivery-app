@@ -8,7 +8,7 @@ const Categories = () => {
         Categories
       </h1>
       <div className="categories-container flex justify-center items-center h-fit w-full gap-12 select-none overflow-x-scroll max-sm:justify-evenly max-sm:gap-6">
-        <div className="categories max-sm:ml-2">
+        <div className="categories max-sm:ml-2 hover:scale-95 ease-in-out duration-75">
           <a href="/veg-menu">
             <Image
               src="/images/vegThali.png"
@@ -23,7 +23,7 @@ const Categories = () => {
             </p>
           </a>
         </div>
-        <div className="categories ">
+        <div className="categories hover:scale-95 ease-in-out duration-75">
           <a href="/non-veg-menu">
             <Image
               src="/images/NonVeg.png"
@@ -38,7 +38,7 @@ const Categories = () => {
             </p>
           </a>
         </div>
-        <div className="categories ">
+        <div className="categories hover:scale-95 ease-in-out duration-75">
           <a href="/briyani-menu">
             <Image
               src="/images/briyani.png"
@@ -53,7 +53,7 @@ const Categories = () => {
             </p>
           </a>
         </div>
-        <div className="categories w-fit h-fit">
+        <div className="categories hover:scale-95 ease-in-out duration-75">
           <a href="/parantha-menu">
             <Image
               src="/images/parantha.png"
@@ -68,7 +68,7 @@ const Categories = () => {
             </p>
           </a>
         </div>
-        <div className="categories max-sm:mr-2">
+        <div className="categories max-sm:mr-2 hover:scale-95 ease-in-out duration-75">
           <a href="/softdrinks-menu">
             <Image
               src="/images/coldDrink.png"
