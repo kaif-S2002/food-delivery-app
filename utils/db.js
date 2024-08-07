@@ -1,7 +1,11 @@
 import mongoose from "mongoose";
 
 const connectDB = async () => {
-  if (mongoose.connections[0].readyState) {
+  if (
+    mongoose.connections &&
+    mongoose.connections.length > 0 &&
+    mongoose.connections[0].readyState
+  ) {
     return;
   }
 
