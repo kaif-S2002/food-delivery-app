@@ -39,15 +39,16 @@ const nav = (props) => {
                 <span>BOWL</span>
               </a>
             </div>
-            <div className="nav-items flex gap-14 justify-between items-center txet-sm max-sm:gap-8">
-              <span className=" flex gap-1 cursor-pointer max-md:hidden">
-                Search
+            <div className="nav-items flex gap-14 justify-between items-center text-lg max-sm:gap-8">
+              <span className="search flex items-center gap-1 cursor-pointer max-md:hidden">
+                <a href="/search" className=" pb-0.5">
+                  Search
+                </a>
                 <IoIosSearch size={24} />
               </span>
-              <span className="cart flex justify-center items-center cursor-pointer max-md:hidden relative">
-                <a href="/"></a>
-                Cart
-                <CiShoppingCart size={32} className=" pb-0.5" />
+              <span className="cart flex items-center cursor-pointer max-md:hidden relative">
+                <a href="/cart">Cart</a>
+                <CiShoppingCart size={32} />
                 <span className=" text-green-600 text-[8px] pb-0.5 font-bold absolute right-[10px]">
                   0
                 </span>
@@ -60,7 +61,10 @@ const nav = (props) => {
                 }
               >
                 {status === "authenticated" ? (
-                  <p href="" className=" text-sm">
+                  <p
+                    href=""
+                    className=" text-sm max-sm:text-xs underline underline-offset-4"
+                  >
                     Hi, {session.data.user.name}
                   </p>
                 ) : (
