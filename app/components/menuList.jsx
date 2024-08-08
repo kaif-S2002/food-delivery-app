@@ -11,7 +11,7 @@ const MenuList = () => {
         </h1>
 
         <div className="menuList flex gap-10 w-full py-6 overflow-y-clip overflow-x-scroll max-sm:gap-2">
-          <div className="menuList-card flex flex-col justify-start p-2 rounded-xl shadow-xl overflow-hidden ease-in-out duration-75 hover:scale-105 max-sm:mx-2">
+          <div className="menuList-card flex flex-col justify-start p-1.5 rounded-xl shadow-xl overflow-hidden ease-in-out duration-75 hover:scale-105 max-sm:mx-2">
             <div className="menuList-image h-fit w-full ">
               <Image
                 src={"/images/briyani.png"}
@@ -44,14 +44,14 @@ const MenuList = () => {
                     </select>
                   </span>
                 </p>
-                <button className=" border-2 py-1 px-6 text-sm rounded-md bg-gray-200 hover:bg-gray-300 text-green-700 font-bold outline-none border-none">
+                <button className="addItem-btn border-2 h-7 px-6 text-sm rounded-md bg-black text-white hover:bg-green-700 font-bold tracking-wider outline-none border-none text-center active:scale-95 ease-in-out duration-75 ">
                   ADD
                 </button>
               </div>
             </div>
           </div>
 
-          <div className="menuList-card flex flex-col justify-start p-2 rounded-xl shadow-xl overflow-hidden ease-in-out duration-75 hover:scale-105 max-sm:mx-2">
+          <div className="menuList-card flex flex-col justify-start p-1.5 rounded-xl shadow-xl overflow-hidden ease-in-out duration-75 hover:scale-105 max-sm:mx-2">
             <div className="menuList-image h-fit w-full ">
               <Image
                 src={"/images/briyani.png"}
@@ -84,7 +84,7 @@ const MenuList = () => {
                     </select>
                   </span>
                 </p>
-                <button className=" border-2 py-1 px-6 text-sm rounded-md bg-gray-200 hover:bg-gray-300 text-green-700 font-bold outline-none border-none">
+                <button className="addItem-btn border-2 h-7 px-6 text-sm rounded-md bg-black text-white hover:bg-green-700 font-bold tracking-wider outline-none border-none text-center active:scale-95 ease-in-out duration-75 ">
                   ADD
                 </button>
               </div>
