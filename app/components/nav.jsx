@@ -9,24 +9,37 @@ import DropDownMenu from "./dropDownMenu";
 
 const nav = (props) => {
   const [isAdmin, setIsAdmin] = useState(false);
+  const [userName, setUserName] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [fetching, setFetching] = useState(false);
   const session = useSession();
   const status = session.status;
 
-  useEffect(() => {
-    const isAdminEmail = async () => {
-      setFetching(true);
-      const adminEmail =
-        (await status) === "authenticated" ? session.data.user.email : null;
-      (await adminEmail) === "kaifs8998@gmail.com" || "junedkhan933@gmail.com"
-        ? setIsAdmin(true)
-        : setIsAdmin(false);
+  const getFirstName = async () => {
+    const name = session.data.user.name;
+    const firstName = name.split(" ").shift();
+    const capitalizedName =
+      firstName.charAt(0).toUpperCase() + firstName.slice(1);
+    setUserName(capitalizedName);
+  };
 
-      setFetching(false);
-    };
-    isAdminEmail();
+  const isAdminEmail = async () => {
+    setFetching(true);
+    const adminEmail = session.data.user.email;
+    adminEmail === "kaifs8998@gmail.com" || "junedkhan933@gmail.com"
+      ? setIsAdmin(true)
+      : setIsAdmin(false);
+
+    setFetching(false);
+  };
+
+  useEffect(() => {
+    if (status === "authenticated") {
+      getFirstName();
+      isAdminEmail();
+    }
   }, [status]);
+
   return (
     <>
       <header>
@@ -65,7 +78,7 @@ const nav = (props) => {
                     href=""
                     className=" text-sm max-sm:text-xs underline underline-offset-4"
                   >
-                    Hi, {session.data.user.name}
+                    Hello, {userName}
                   </p>
                 ) : (
                   <a href={status === "loading" ? "" : "/login"}>Sign In</a>
