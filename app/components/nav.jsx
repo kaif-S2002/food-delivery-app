@@ -15,11 +15,9 @@ const nav = (props) => {
   const session = useSession();
   const status = session.status;
 
-  const getFirstName = async () => {
+  const getCapitalizedName = async () => {
     const name = session.data.user.name;
-    const firstName = name.split(" ").shift();
-    const capitalizedName =
-      firstName.charAt(0).toUpperCase() + firstName.slice(1);
+    const capitalizedName = name.toUpperCase();
     setUserName(capitalizedName);
   };
 
@@ -35,7 +33,7 @@ const nav = (props) => {
 
   useEffect(() => {
     if (status === "authenticated") {
-      getFirstName();
+      getCapitalizedName();
       isAdminEmail();
     }
   }, [status]);
@@ -78,7 +76,7 @@ const nav = (props) => {
                     href=""
                     className=" text-sm max-sm:text-xs underline underline-offset-4"
                   >
-                    Hello, {userName}
+                    {userName}
                   </p>
                 ) : (
                   <a href={status === "loading" ? "" : "/login"}>Sign In</a>
