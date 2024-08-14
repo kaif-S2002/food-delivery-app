@@ -17,7 +17,15 @@ const nav = (props) => {
 
   const getCapitalizedName = async () => {
     const name = session.data.user.name;
-    const capitalizedName = name.toUpperCase();
+    const firstName = name.split(" ")[0];
+    const lastName = name.split(" ")[1];
+    const capitalizedName = `
+      ${firstName.charAt(0).toUpperCase() + firstName.slice(1)}
+      ${
+        lastName === undefined
+          ? ""
+          : lastName.charAt(0).toUpperCase() + lastName.slice(1)
+      }`;
     setUserName(capitalizedName);
   };
 
