@@ -19,6 +19,7 @@ const nav = (props) => {
     const name = session.data.user.name;
     const firstName = name.split(" ")[0];
     const lastName = name.split(" ")[1];
+
     const capitalizedName = `
       ${firstName.charAt(0).toUpperCase() + firstName.slice(1)}
       ${
@@ -32,9 +33,14 @@ const nav = (props) => {
   const isAdminEmail = async () => {
     setFetching(true);
     const adminEmail = session.data.user.email;
-    adminEmail === "kaifs8998@gmail.com" || "junedkhan933@gmail.com"
-      ? setIsAdmin(true)
-      : setIsAdmin(false);
+    if (
+      adminEmail === "kaifs8998@gmail.com" ||
+      adminEmail === "junedkhan933@gmail.com"
+    ) {
+      setIsAdmin(true);
+    } else {
+      setIsAdmin(false);
+    }
 
     setFetching(false);
   };
