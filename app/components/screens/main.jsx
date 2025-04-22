@@ -8,16 +8,11 @@ import Loading from "../loading";
 
 const page = () => {
   const { status } = useSession();
-  const [session, setSession] = useState();
-
-  useEffect(() => {
-    const getSessionStatus = status === "loading";
-    getSessionStatus ? setSession(false) : setSession(true);
-  }, [status]);
+  const isLoading = !status || status === "loading";
 
   return (
     <>
-      {!session ? (
+      {isLoading ? (
         <Loading />
       ) : (
         <>
