@@ -13,7 +13,7 @@ const UserProfile = () => {
 
   return (
     <div className="userProfile-wrapper flex justify-center items-center h-screen mb-10">
-      <div className="userProfile-card flex flex-col justify-center items-start w-96 h-fit gap-16 max-md:gap-10 mt-16 border rounded-xl py-5 px-10 text-xs font-medium tracking-wider relative">
+      <div className="userProfile-card flex flex-col justify-center items-start w-96 h-fit gap-16 mt-16 border rounded-xl py-5 px-10 text-xs font-medium tracking-wider relative">
         <h1 className=" font-bold text-3xl select-none">Profile</h1>
         <button
           className="bg-black text-white px-2 py-1.5 right-10 top-16 mt-2 absolute font-bold rounded-lg active:scale-95 duration-75 ease-in-out"
@@ -34,7 +34,7 @@ const UserProfile = () => {
               onChange={(e) => setName(e.target.value)}
               placeholder={"Add Your Name"}
               className="text-sm rounded-lg py-1 px-2  w-full outline-none border border-gray-400 bg-gray-200"
-              disabled={isEdit ? false : true}
+              disabled={!isEdit}
             />
           </div>
           <div className="userProfileEmail flex flex-row gap-2 relative">
@@ -63,7 +63,7 @@ const UserProfile = () => {
               onChange={(e) => setPhone(e.target.value)}
               placeholder={"Add Your Phone No"}
               className="text-sm rounded-lg py-1 px-2  w-full outline-none border border-gray-400 bg-gray-200"
-              disabled={isEdit ? false : true}
+              disabled={!isEdit}
             />
           </div>
           <div className="userProfileAddress flex flex-row gap-2 relative">
@@ -78,7 +78,7 @@ const UserProfile = () => {
               onChange={(e) => setAddress(e.target.value)}
               placeholder={"Add Your Address"}
               className="text-sm rounded-lg py-1 px-2  w-full outline-none border border-gray-400 bg-gray-200"
-              disabled={isEdit ? false : true}
+              disabled={!isEdit}
             />
           </div>
 
@@ -95,7 +95,7 @@ const UserProfile = () => {
                 onChange={(e) => setCity(e.target.value)}
                 placeholder={"Add Your City"}
                 className="text-sm rounded-lg py-1 px-2 w-full outline-none border border-gray-400 bg-gray-200"
-                disabled={isEdit ? false : true}
+                disabled={!isEdit}
               />
             </div>
             <div className="userProfileAddress flex flex-row gap-2 relative">
@@ -110,14 +110,14 @@ const UserProfile = () => {
                 onChange={(e) => setPincode(e.target.value)}
                 placeholder={"Add Your Pincode"}
                 className="text-sm rounded-lg py-1 px-2 w-full outline-none border border-gray-400 bg-gray-200"
-                disabled={isEdit ? false : true}
+                disabled={!isEdit}
               />
             </div>
           </div>
 
           <button
-            className=" bg-black text-white font-bold py-2 rounded-lg active:scale-95 duration-75 ease-in-out"
-            disabled={isEdit ? false : true}
+            className=" bg-black text-white font-bold py-2 rounded-lg active:scale-95 duration-75 ease-in-out disabled:pointer-events-none disabled:bg-gray-500"
+            disabled={!isEdit}
           >
             Save
           </button>
