@@ -2,7 +2,7 @@
 import React from "react";
 import { signOut } from "next-auth/react";
 
-const dropDownMenu = (props) => {
+const DropDownMenu = (props) => {
   return (
     <>
       <div
@@ -53,4 +53,4 @@ const dropDownMenu = (props) => {
   );
 };
 
-export default dropDownMenu;
+export default DropDownMenu;

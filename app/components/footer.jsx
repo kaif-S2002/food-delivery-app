@@ -6,7 +6,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { SiPaytm } from "react-icons/si";
 import { RiVisaFill } from "react-icons/ri";
 
-const footer = () => {
+const Footer = () => {
   return (
     <>
       <footer className="footer-wrapper bg-gray-100 border-t h-fit border-gray-200 overflow-hidden">
@@ -89,4 +89,4 @@ const footer = () => {
   );
 };
 
-export default footer;
+export default Footer;

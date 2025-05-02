@@ -7,7 +7,7 @@ import { FaUserCircle } from "react-icons/fa";
 import { useSession } from "next-auth/react";
 import DropDownMenu from "./dropDownMenu";
 
-const nav = (props) => {
+const Nav = (props) => {
   const [isAdmin, setIsAdmin] = useState(false);
   const [userName, setUserName] = useState("");
   const [isOpen, setIsOpen] = useState(false);
@@ -110,4 +110,4 @@ const nav = (props) => {
   );
 };
 
-export default nav;
+export default Nav;

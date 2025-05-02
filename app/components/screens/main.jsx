@@ -6,7 +6,7 @@ import MenuList from "../menuList";
 import { useSession } from "next-auth/react";
 import Loading from "../loading";
 
-const page = () => {
+const Page = () => {
   const { status } = useSession();
   const isLoading = !status || status === "loading";
 
@@ -25,4 +25,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
